@@ -35,3 +35,10 @@ class question:
                 q = "%d / %d = "%(q1,q2)
                 a = q1/q2
         return question(q, a) # new class 
+
+# all wrong answers
+wrong = []
+# the score
+score = 0
+# number of questions 
+numqs = 5
