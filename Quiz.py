@@ -36,9 +36,27 @@ class question:
                 a = q1/q2
         return question(q, a) # new class 
 
-# all wrong answers
-wrong = []
-# the score
-score = 0
-# number of questions 
-numqs = 5
+# get number
+def getnum(prompt):
+    try: # try if not number
+        return int(input(prompt))
+    except:
+        return getnum(prompt)
+
+
+# main quiz
+def quiz():
+    # all wrong answers
+    wrong = []
+    # the score
+    score = 0
+    # number of questions 
+    numqs = getnum("Number of Questions :\n")
+    
+    for x in range(1,numqs):# the main loop
+        pass
+
+
+if __name__ == "__main__":
+    quiz()
+
