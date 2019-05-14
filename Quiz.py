@@ -76,7 +76,7 @@ def quiz():
     print("Score :", score)
     print("Wrong :")
     for x in wrong:
-        print(x.text+"=", x.answer)
+        print(x.text, x.answer)
 
 
 
