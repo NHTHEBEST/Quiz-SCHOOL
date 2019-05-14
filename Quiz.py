@@ -20,8 +20,8 @@ def Genarate(level): # genarate func
     ran = random.randint(1,4) # add sub mul div
     q = ""
     a = 1
-    q1 = random.randint(1,100) * level # first num
-    q2 = random.randint(1,100) * level # sec num
+    q1 = random.randint(1,10) * level # first num
+    q2 = random.randint(1,10) * level # sec num
     if ran == 1: # add
         q = "%d + %d = "%(q1,q2) # text
         a = q1+q2 # awser
