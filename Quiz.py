@@ -69,7 +69,13 @@ def quiz():
     for x in range(1,numqs):# the main loop
         q = Genarate(leval)
         cor = ask(q)
-
+        if cor:
+            score += 1
+        else:
+            wrong.append(q)
+    print("Score :", score)
+    print("Wrong :")
+    print(wrong)
 
 
 
