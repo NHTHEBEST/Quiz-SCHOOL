@@ -1,7 +1,7 @@
 # Author NHTHEBEST
 # Porject Quiz
 # Subject DTP
-import random
+import random, time
 # Class for question 
 class question:
     # init function
@@ -66,7 +66,7 @@ def quiz():
     # leval
     leval = getnum("Leval :\n")
     
-    for x in range(1,numqs):# the main loop
+    for x in range(0,numqs):# the main loop
         q = Genarate(leval)
         cor = ask(q)
         if cor:
