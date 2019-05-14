@@ -1,11 +1,11 @@
 # Author NHTHEBEST
 # Porject Quiz
 # Subject DTP
-
+import random
 # Class for question 
 class question:
     # init function
-    def __init__(self, answer, text):
+    def __init__(self, text, answer):
         # set answer
         self.answer = answer
         # set question text
@@ -19,9 +19,9 @@ class question:
 def Genarate(level): # genarate func
     ran = random.randint(1,4) # add sub mul div
     q = ""
-    a = 0
-    q1 = random.randint(0,100) * level # first num
-    q2 = random.randint(0,100) * level # sec num
+    a = 1
+    q1 = random.randint(1,100) * level # first num
+    q2 = random.randint(1,100) * level # sec num
     if ran == 1: # add
         q = "%d + %d = "%(q1,q2) # text
         a = q1+q2 # awser
@@ -75,7 +75,8 @@ def quiz():
             wrong.append(q)
     print("Score :", score)
     print("Wrong :")
-    print(wrong)
+    for x in wrong:
+        print(x.text+"=", x.answer)
 
 
 
