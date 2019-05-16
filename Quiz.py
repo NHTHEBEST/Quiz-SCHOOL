@@ -21,7 +21,7 @@ def Genarate(level): # genarate func
     q = ""
     a = 1
     q1 = random.randint(1,10) * level # first num
-    q2 = random.randint(1,10) * level # sec num
+    q2 = random.randint(1,10) * level # sec 
     if ran == 1: # add
         q = "%d + %d = "%(q1,q2) # text
         a = q1+q2 # awser
@@ -32,6 +32,8 @@ def Genarate(level): # genarate func
         q = "%d x %d = "%(q1,q2)
         a = q1*q2
     else:          # div
+        # make div work
+        q1 = q1 * q2
         q = "%d / %d = "%(q1,q2)
         a = q1/q2
     return question(q, a) # new class 
