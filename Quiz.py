@@ -1,7 +1,7 @@
 # Author NHTHEBEST
-# Porject Quiz
+# Project Quiz
 # Subject DTP
-import random, time
+import random, time, winsound, system
 # Class for question 
 class question:
     # init function
@@ -65,8 +65,8 @@ def quiz():
     score = 0
     # number of questions 
     numqs = getnum("Number of Questions :\n")
-    # leval
-    leval = getnum("Leval :\n")
+    # level
+    leval = getnum("Level :\n")
     
     for x in range(0,numqs):# the main loop
         q = Genarate(leval)
@@ -81,7 +81,9 @@ def quiz():
         print(x.text, x.answer)
 
 
-
+winsound.PlaySound("", winsound.SND_ASYNC)
+system.os("color da")
 if __name__ == "__main__":
     quiz()
+
 
