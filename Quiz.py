@@ -1,7 +1,7 @@
 # Author NHTHEBEST
-# Porject Quiz
+# Project Quiz
 # Subject DTP
-import random, time
+import random, time, winsound, system
 # Class for question 
 class question:
     # init function
@@ -21,7 +21,7 @@ def Genarate(level): # genarate func
     q = ""
     a = 1
     q1 = random.randint(1,10) * level # first num
-    q2 = random.randint(1,10) * level # sec num
+    q2 = random.randint(1,10) * level # sec 
     if ran == 1: # add
         q = "%d + %d = "%(q1,q2) # text
         a = q1+q2 # awser
@@ -32,6 +32,8 @@ def Genarate(level): # genarate func
         q = "%d x %d = "%(q1,q2)
         a = q1*q2
     else:          # div
+        # make div work
+        q1 = q1 * q2
         q = "%d / %d = "%(q1,q2)
         a = q1/q2
     return question(q, a) # new class 
@@ -63,8 +65,8 @@ def quiz():
     score = 0
     # number of questions 
     numqs = getnum("Number of Questions :\n")
-    # leval
-    leval = getnum("Leval :\n")
+    # level
+    leval = getnum("Level :\n")
     
     for x in range(0,numqs):# the main loop
         q = Genarate(leval)
@@ -79,7 +81,9 @@ def quiz():
         print(x.text, x.answer)
 
 
-
+winsound.PlaySound("", winsound.SND_ASYNC)
+system.os("color da")
 if __name__ == "__main__":
     quiz()
+
 
