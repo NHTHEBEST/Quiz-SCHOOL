@@ -1,7 +1,7 @@
 # Author NHTHEBEST
 # Project Quiz
 # Subject DTP
-import random, time, winsound, system
+import random, time, winsound, os
 # Class for question 
 class question:
     # init function
@@ -75,14 +75,16 @@ def quiz():
             score += 1
         else:
             wrong.append(q)
+    winsound.PlaySound("End.wav", winsound.SND_ASYNC)
     print("Score :", score)
     print("Wrong :")
     for x in wrong:
         print(x.text, x.answer)
+    time.sleep(27)
 
 
-winsound.PlaySound("", winsound.SND_ASYNC)
-system.os("color da")
+winsound.PlaySound("back.wav", winsound.SND_ASYNC)
+os.system("color da")
 if __name__ == "__main__":
     quiz()
 
