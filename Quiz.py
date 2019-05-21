@@ -35,7 +35,7 @@ def Genarate(level): # genarate func
         # make div work
         q1 = q1 * q2
         q = "%d / %d = "%(q1,q2)
-        a = q1/q2
+        a = int(q1/q2)
     return question(q, a) # new class 
 
 # get number
