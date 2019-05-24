@@ -93,6 +93,7 @@ def quiz():
     print("Wrong :")
     for x in wrong:
         print(x.text, x.answer)
+    print("/n/nPlease wait for sound to end")
     time.sleep(27)
 
 
