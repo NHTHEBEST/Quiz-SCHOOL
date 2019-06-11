@@ -3,7 +3,7 @@
 # Subject DTP
 import random, time, winsound, os
 # into
-intro = """
+INTRO = """
 $$\   $$\ $$\   $$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$\  $$$$$$$$\  $$$$$$\ $$$$$$$$\ 
 $$$\  $$ |$$ |  $$ |\__$$  __|$$ |  $$ |$$  _____|$$  __$$\ $$  _____|$$  __$$\\__$$  __|
 $$$$\ $$ |$$ |  $$ |   $$ |   $$ |  $$ |$$ |      $$ |  $$ |$$ |      $$ /  \__|  $$ |   
@@ -100,7 +100,7 @@ def quiz():
 winsound.PlaySound("back.wav", winsound.SND_ASYNC)
 os.system("color da")
 os.system("cls")
-print(intro)
+print(INTRO)
 if __name__ == "__main__":
     quiz()
 
